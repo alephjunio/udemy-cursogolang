@@ -44,11 +44,16 @@ func main() {
 			},
 		},
 	}
+
 	fmt.Printf("Cliente: %s\n", pedido.clienteID)
+
 	fmt.Printf("Nome: %s\n", pedido.nome)
+
 	fmt.Printf("Itens:\n")
+
 	for _, item := range pedido.items {
 		fmt.Printf("- %s: R$ %.2f x %d = R$ %.2f\n", item.nome, item.preco, item.quantidade, item.preco*float64(item.quantidade))
 	}
+
 	fmt.Printf("Valor Total do Pedido: R$ %.2f\n", pedido.total())
 }
