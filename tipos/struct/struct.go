@@ -31,13 +31,16 @@ func (p *Produto) ReduzirQuantidade(qtd int) {
 }
 
 func main() {
-
+	// criando de forma direta
 	produto := Produto{
 		Nome:       "Notebook",
 		Preco:      2500,
 		Desconto:   0.1,
 		Quantidade: 10,
 	}
+
+	// criando de forma reduzida
+	notebook := Produto{"Notebook", 2500, 0.1, 10}
 
 	fmt.Println("--------------------------------")
 	fmt.Println("Nome:", produto.Nome)
